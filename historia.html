@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="historia.css">
+</head>
+<body>
+    <!-- 1. Fondo dinámico animado -->
+    <div class="animated-bg"></div>
+    
+    <!-- 2. Contenedor de Fotos Pequeñas Flotantes (Nuevo) -->
+    <div id="photos-container"></div>
+
+    <!-- 3. Contenedor de Corazones Flotantes -->
+    <div id="hearts-container"></div>
+
+    <!-- 4. Las Capas de Texto -->
+    <main class="container d-flex align-items-center justify-content-center vh-100 position-relative" style="z-index: 10;">
+        
+        <!-- CAPA 1: EL PERDÓN -->
+        <section id="step1" class="glass-card text-center p-5 shadow-lg animate__animated animate__fadeInUp">
+            <div class="icon-pulse mb-3">🥺</div>
+            <h1 class="display-5 fw-bold text-gradient">Perdón mi amor </h1>
+            <p class="lead text-dark mt-4 mb-4">
+                Sé que he cometido errores y me duele haberte causado tristeza, quiero ganarme tu confianza poco a poco, Quiero arreglar cada pedazo roto y ser el hombre que mereces, no quiero perderte eres mi motivo de mejorar cada dia tratar de superarme me ayudas demasiado y sin ti nada es igual te vas un dia y ya me muero no puedo dormir bien jeje, yo se que poco a poco vamos a prosperar en todo.
+            </p>
+            <button class="btn-pro mt-2" onclick="nextStep(1, 2)">Te lo prometo...</button>
+        </section>
+        
+
+        <!-- CAPA 2: EL AMOR Y LOS RECUERDOS -->
+        <section id="step2" class="glass-card text-center p-5 shadow-lg d-none animate__animated">
+            <div class="icon-pulse mb-3">👩‍❤️‍👨</div>
+            <h1 class="display-5 fw-bold text-gradient">Una vida juntos</h1>
+            <p class="lead text-dark mt-4 mb-4 text-start px-3">
+                Desde conocernos en el colegio siendo mocosos, a planear esos viajes a Ica ,Selva , Cajamarca... y muchos mas que se viene hasta planear nuestro hogar y futuro, todo cobra sentido si estás conmigo. Eres mi compañera de rutas (aunque mala copiloto dando las indicaciones del maps jaja ) . 
+                te amo mucho mi vida y estoy seguro de vivir toda mi vida junto a ti, se que seremos unos papis muy bonitos responsables y divertidos , perdon por todo mi amor y perdon por cata se que volvera <3, (te amo mi negrita bella )
+            </p>
+            <button class="btn-pro mt-2" onclick="nextStep(2, 3)">Tengo algo que decirte...</button>
+        </section>
+
+        <!-- CAPA 3: LA PREGUNTA FINAL -->
+        <section id="step3" class="glass-card text-center p-5 shadow-lg d-none animate__animated">
+            <div class="icon-pulse mb-3">💍</div>
+            <h2 class="fw-bold text-dark mb-5 display-6">¿Quieres seguir siendo mi futuro, mi todo y pronto mi esposa?</h2>
+            
+            <div class="d-flex justify-content-center gap-4 align-items-center mt-4 btn-wrapper">
+                <button id="btnSi" class="btn-yes shadow" onclick="goToGalaxy()">¡MIL VECES SÍ!</button>
+                <button id="btnNo" class="btn-no shadow-sm">No</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="historia.js"></script>
+</body>
+</html>

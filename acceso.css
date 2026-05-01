@@ -1,0 +1,10 @@
+body { height: 100vh; background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); display: flex; align-items: center; justify-content: center; overflow: hidden; margin: 0; font-family: sans-serif; }
+.roses-overlay { position: absolute; width: 100%; height: 100%; background: url('https://www.transparenttextures.com/patterns/roses.png'); opacity: 0.3; }
+.glass-card { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.4); border-radius: 30px; padding: 40px; width: 350px; z-index: 10; }
+.lock-icon { font-size: 4rem; margin-bottom: -10px; animation: float 3s infinite ease-in-out; }
+.digit-box { background: rgba(0,0,0,0.1); border-radius: 15px; padding: 10px; color: white; display: flex; flex-direction: column; align-items: center; width: 60px; }
+.digit-box button { background: none; border: none; color: white; cursor: pointer; }
+.digit-box span { font-size: 2rem; font-weight: bold; }
+.unlock-btn { background: white; color: #ff4d6d; border: none; padding: 15px; border-radius: 50px; font-weight: bold; width: 100%; transition: 0.3s; }
+.unlock-btn:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }

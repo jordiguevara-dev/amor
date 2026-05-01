@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Universo</title>
+    <!-- Cargamos Confetti para la sorpresa final -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="universo.css">
+</head>
+<body>
+    <!-- El fondo de estrellas brillantes -->
+    <div id="star-field"></div>
+    
+    <!-- Instrucciones que desaparecen solas -->
+    <div id="instructions" class="instructions">
+        Desliza hacia arriba para viajar por nuestra historia 🤍
+    </div>
+    
+    <!-- La "Cámara" 3D -->
+    <div class="viewport">
+        <div id="scene" class="scene">
+            <!-- JS inyectará las fotos aquí -->
+            
+            <!-- El gran final en lo más profundo de la galaxia -->
+            <div id="final-message" class="final-message">
+                <h1 class="glow-text">Tú eres mi Universo</h1>
+                <p>Gracias por no rendirte conmigo. Te amo.</p>
+                <button class="btn-celebrate mt-4" onclick="celebrate()">Besar al programador 😘</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="universo.js"></script>
+</body>
+</html>

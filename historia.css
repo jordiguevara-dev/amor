@@ -1,0 +1,56 @@
+:root {
+    --primary: #ff4d6d;
+    --secondary: #ff758c;
+}
+
+body { margin: 0; padding: 0; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
+
+/* 1. Fondos y Animaciones Base */
+.animated-bg {
+    position: fixed; width: 100vw; height: 100vh;
+    background: linear-gradient(45deg, #ff9a9e, #fecfef, #ffc3a0, #ffafbd);
+    background-size: 400% 400%; animation: gradientShift 10s ease infinite; z-index: 1;
+}
+@keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+/* 2. Corazones Ascendentes */
+#hearts-container { position: fixed; width: 100vw; height: 100vh; z-index: 3; pointer-events: none; }
+.floating-heart { position: absolute; bottom: -50px; color: rgba(255, 255, 255, 0.8); animation: floatUp linear forwards; }
+@keyframes floatUp { 
+    0% { transform: translateY(0) scale(0.8) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-120vh) scale(1.5) rotate(360deg); opacity: 0; } 
+}
+
+/* 3. Fotos Pequeñas Animadas (NUEVO) */
+#photos-container { position: fixed; width: 100vw; height: 100vh; z-index: 2; pointer-events: none; }
+.floating-pic {
+    position: absolute; width: 90px; height: 100px; object-fit: cover;
+    border-radius: 8px; border: 4px solid rgba(255,255,255,0.8);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    animation: levitate 8s infinite alternate ease-in-out;
+}
+@keyframes levitate {
+    0% { transform: translateY(0px) rotate(-5deg); }
+    100% { transform: translateY(-30px) rotate(5deg); }
+}
+
+/* 4. Tarjetas de Cristal (Glassmorphism) */
+.glass-card { background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.8); border-radius: 30px; max-width: 600px; width: 90%; }
+.text-gradient { background: linear-gradient(45deg, #d90429, #ff4d6d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.icon-pulse { font-size: 4.5rem; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+
+/* 5. Botones Responsivos */
+.btn-wrapper { min-height: 60px; }
+.btn-pro { background: linear-gradient(45deg, var(--primary), var(--secondary)); color: white; border: none; padding: 15px 40px; border-radius: 50px; font-weight: bold; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 10px 20px rgba(255, 77, 109, 0.3); }
+.btn-pro:hover { transform: translateY(-3px); color: white; }
+.btn-yes { background: #2b9348; color: white; border: none; padding: 15px 40px; border-radius: 50px; font-weight: bold; font-size: 1.2rem; transition: 0.3s; z-index: 5; }
+.btn-yes:hover { background: #007f5f; transform: scale(1.05); }
+
+/* Inicialmente no tiene position absolute para que se vea bien en celulares al lado del "SÍ" */
+.btn-no { background: rgba(255, 255, 255, 0.8); color: #333; border: none; padding: 15px 40px; border-radius: 50px; font-weight: bold; font-size: 1.2rem; transition: left 0.2s ease, top 0.2s ease; z-index: 9999; cursor: pointer; }
+
+/* Responsive ajustes */
+@media (max-width: 600px) {
+    .floating-pic { width: 70px; height: 80px; } /* Fotos más chicas en móvil */
+}
